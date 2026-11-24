@@ -1,0 +1,96 @@
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #242a31;
+  background: #f5f6f8;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-optical-sizing: auto;
+  font-weight: 400;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; min-height: 100vh; }
+button, input { font: inherit; }
+button { cursor: pointer; }
+button:disabled { cursor: not-allowed; opacity: 0.55; }
+button:focus-visible, input:focus-visible { outline: 3px solid #8a9dff; outline-offset: 3px; }
+[hidden] { display: none !important; }
+
+.page-shell { width: min(1100px, calc(100% - 48px)); margin: 0 auto; padding: 54px 0 28px; }
+.page-header { margin-bottom: 32px; }
+.eyebrow { color: #777e88; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.15em; margin: 0 0 8px; }
+.page-header h1 { font-family: Georgia, "Times New Roman", serif; font-size: clamp(2.2rem, 5vw, 3rem); font-weight: 500; letter-spacing: -0.04em; margin: 0; }
+.page-intro { color: #6d747d; margin: 8px 0 0; }
+
+.checkout-layout { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(340px, 0.85fr); gap: 24px; align-items: start; }
+.panel { background: #fff; border: 1px solid #e8eaed; border-radius: 12px; padding: 28px; }
+.section-heading { align-items: end; display: flex; justify-content: space-between; margin-bottom: 24px; }
+.section-heading .eyebrow { margin-bottom: 5px; }
+.section-heading h2 { font-family: Georgia, "Times New Roman", serif; font-size: 1.55rem; font-weight: 500; letter-spacing: -0.02em; margin: 0; }
+.item-count { color: #777e88; font-size: 0.85rem; }
+.product-list { display: grid; gap: 12px; }
+.product { align-items: center; border: 1px solid #e8eaed; border-radius: 9px; display: flex; gap: 16px; justify-content: space-between; min-height: 104px; padding: 18px; }
+.product h3 { font-size: 1rem; font-weight: 600; margin: 0; }
+.product-price { color: #565e68; font-size: 0.95rem; margin: 7px 0 0; }
+.add-button, .primary-button { align-items: center; background: #262c33; border: 1px solid #262c33; border-radius: 6px; color: #fff; display: inline-flex; font-size: 0.86rem; font-weight: 600; gap: 8px; justify-content: center; min-height: 42px; padding: 0 15px; transition: background-color 140ms ease, border-color 140ms ease; }
+.add-button:hover, .primary-button:hover:not(:disabled) { background: #414951; border-color: #414951; }
+.add-button span { font-size: 1.2rem; font-weight: 400; }
+.subheading { color: #6d747d; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.04em; margin: 0 0 12px; text-transform: uppercase; }
+.cart-items { min-height: 120px; }
+.empty-cart { align-items: center; background: #fafafa; border: 1px dashed #dfe2e6; border-radius: 8px; color: #666e78; display: flex; flex-direction: column; justify-content: center; min-height: 132px; padding: 18px; text-align: center; }
+.empty-cart-icon { color: #9da4ac; font-size: 1.7rem; line-height: 1; }
+.empty-cart p { font-size: 0.9rem; margin: 10px 0 0; }
+.empty-cart .empty-cart-hint { color: #858c95; font-size: 0.8rem; margin-top: 4px; }
+.cart-line { border-bottom: 1px solid #eceef0; padding: 6px 0 16px; }
+.cart-line + .cart-line { padding-top: 16px; }
+.cart-line-header { align-items: start; display: flex; justify-content: space-between; gap: 12px; }
+.cart-line h4 { font-size: 0.95rem; font-weight: 600; margin: 0; }
+.unit-price { color: #777e88; font-size: 0.8rem; margin: 5px 0 0; }
+.text-button { background: transparent; border: 0; color: #6d747d; font-size: 0.78rem; padding: 4px; text-decoration: underline; text-underline-offset: 3px; }
+.text-button:hover { color: #242a31; }
+.quantity-controls { align-items: center; display: flex; justify-content: space-between; margin-top: 14px; }
+.quantity-label { color: #777e88; font-size: 0.8rem; }
+.quantity-stepper { align-items: center; border: 1px solid #e2e5e8; border-radius: 6px; display: flex; }
+.quantity-stepper button { background: #fff; border: 0; color: #303740; font-size: 1.1rem; height: 34px; min-width: 36px; }
+.quantity-stepper button:hover { background: #f3f4f5; }
+.quantity-stepper span { font-size: 0.85rem; min-width: 30px; text-align: center; }
+.line-total { align-items: center; color: #777e88; display: flex; font-size: 0.8rem; gap: 8px; margin: 0; }
+.line-total strong { color: #242a31; font-size: 0.9rem; }
+.order-total { align-items: center; border-top: 1px solid #e8eaed; display: flex; font-size: 0.95rem; justify-content: space-between; margin: 4px 0 22px; padding-top: 18px; }
+.order-total strong { font-size: 1.25rem; letter-spacing: -0.02em; }
+#checkout-form { border-top: 1px solid #eceef0; padding-top: 20px; }
+.field { display: grid; gap: 8px; }
+.field label { font-size: 0.86rem; font-weight: 600; }
+.field label span { color: #aa3939; }
+.field input { background: #fff; border: 1px solid #d8dce1; border-radius: 6px; color: #242a31; min-height: 44px; padding: 10px 12px; width: 100%; }
+.field input::placeholder { color: #969da6; }
+.field input[aria-invalid="true"] { border-color: #b42318; }
+.error { color: #b42318; font-size: 0.82rem; margin: 0; }
+.actions { display: grid; gap: 10px; margin-top: 16px; }
+.primary-button { width: 100%; }
+.secondary-button { background: #fff; border: 1px solid #d8dce1; border-radius: 6px; color: #303740; min-height: 42px; }
+.secondary-button:hover { background: #f5f6f8; }
+.confirmation { background: #f0f8f2; border: 1px solid #cfe5d3; border-radius: 8px; margin-top: 16px; padding: 14px; }
+.confirmation h3 { color: #265b34; font-size: 0.95rem; margin: 0; }
+.confirmation p { color: #46544a; font-size: 0.85rem; margin: 7px 0 0; }
+.page-footer { color: #858c95; font-size: 0.78rem; padding: 24px 0 0; text-align: center; }
+
+@media (max-width: 760px) {
+  .page-shell { padding-top: 34px; width: min(620px, calc(100% - 32px)); }
+  .page-header { margin-bottom: 24px; }
+  .checkout-layout { grid-template-columns: 1fr; gap: 16px; }
+  .panel { padding: 22px; }
+}
+
+@media (max-width: 420px) {
+  .page-shell { width: calc(100% - 24px); padding-top: 26px; }
+  .panel { padding: 18px; }
+  .product { align-items: start; flex-direction: column; }
+  .add-button { width: 100%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; }
+}
